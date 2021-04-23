@@ -1,0 +1,16 @@
+UserId,Username,Pwd,Confirmpwd,Uemail,Postal_code,City,Phone
+0,username7,password,password,user7@user7.com,787812,Singapore,89223211
+1,username9,password,password,user9@user1.com,123432,Singapore,90903422
+2,username10,password,password,user10@user1.com,898956,Singapore,98778899
+3,brent,brent,brent,user77@user1.com,778877,Singapore,98885656
+4,nick,password3,password3,nick@user1.com,687711,LA,96761515
+5,niagra,1234,1234,niagra@niagra.com,19247,CA,94436581
+7,Peter,123,123,123@gmail.com,123,singapore,12345678
+8,<script>alert(&#8216;attacked&#8217;)</script>  ,123,123,245@gmail.com,123,123,123
+9,<script>alert(&#8216;attacked&#8217;)</script>,123,123,123@gmail.com,123,123,123
+10,<script>alert(&#8216;attacked&#8217;)</script>,123,123,234,234,234,123
+11,"<script type=""text/javascript"">alert(""XSS"");</script>",123,123,123,123,123,123
+12,bob,123,123,123,123,123,123
+13,username20,password,password,user20@user1.com,123123,Singapore,89123214
+14,username21,123,123,123,123,Singapore,98989898
+15,tae,tae,tae,user1@user1.com,312312,Singapore,98881717

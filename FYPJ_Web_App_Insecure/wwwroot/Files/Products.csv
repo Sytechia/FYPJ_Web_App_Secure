@@ -1,0 +1,10 @@
+ProductId,Title,Author,Genre,Price,Product_Quantity,image
+2,The Lord of the Rings,J.R.R Tolkien,Fantasy,20,100,
+3,The Kite Runner,Khaled Hosseini,Classis,13.99,100,
+4,To Kill a Mockingbird,Harper Lee,Horror,14.99,100,
+5,The Book Thief,Markus Zusak,Young adult,11.99,100,
+6,Wuthering Heights,Emily Brontë,Romance,19.99,100,
+7,The Catcher in the Rye,J.D. Salinger,Novel,11.99,100,
+8,Jane Eyre,Charlotte Bronte,Novel,16.99,100,
+9,1984 ,George Orwell,Science Fiction,13.99,100,
+10,Fahrenheight 451,Ray Bradbury,Novel,20,100,

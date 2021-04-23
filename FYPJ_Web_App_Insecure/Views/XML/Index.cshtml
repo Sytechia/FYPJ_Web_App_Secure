@@ -1,0 +1,23 @@
+﻿@section Scripts{
+    <script src="/files/js/register2.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+@{
+    ViewBag.Title = "Xml ParserMethods Page : ";
+}
+@model ContactUs
+<h2>Do you have any feedback for us?</h2>
+<form asp-controller="XML" asp-action="Index" asp-antiforgery="false">
+    <div class="form-group">
+        <label asp-for="Message">Message</label>
+        <textarea rows="5" cols="15" asp-for="Message" class="form-control" id="Message"></textarea>
+        <span asp-validation-for="Message" class="text-muted"></span>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary btn-block btn-large" onclick="myFunction()">Send</button>
+    </div>
+    <p>@ViewBag.Successful</p>
+    <p>@ViewBag.Error</p>
+</form>
+
+

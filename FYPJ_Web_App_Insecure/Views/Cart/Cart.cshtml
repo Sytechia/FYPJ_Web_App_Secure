@@ -1,0 +1,81 @@
+﻿@model FYPJ_Web_App_Insecure.Models.CartUser
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<style>
+    table.receipt {
+        /* border: 1px solid; */
+        width: 70%;
+        padding: 4px;
+    }
+
+        table.receipt .quantityInput {
+            width: 2.5em;
+            text-align: right;
+        }
+</style>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<h1>Your Cart</h1>
+
+@if (ViewBag.cart == null)
+{
+    @if (@HttpContextAccessor.HttpContext.Session.GetString("UserId") == null)
+    {
+        <p>Please Log in</p>
+    }
+    else
+    {
+        
+        <p> Add <a asp-controller="Shop" asp-action="Index">something</a> to the cart!</p>
+    }
+}
+else
+{
+    <table class="receipt">
+        <tbody>
+            <tr>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+            </tr>
+            @foreach (var item in Model.CartItem)
+            {
+            <tr>
+                <td>@item.ProductTitle</td>
+                <td>$ @item.ProductPrice</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a asp-controller="Cart" asp-action="AddQuantity" asp-route-productId=@item.Id>Add One</a>
+                </td>
+                <td>
+                    <a asp-controller="Cart" asp-action="RemoveQuantity" asp-route-productId=@item.Id>Remove One</a>
+                </td>
+                <td>
+                    <a asp-controller="Cart" asp-action="RemoveOrder" asp-route-productId=@item.Id>remove</a>
+                </td>
+            </tr>
+            }
+
+            <tr>
+                <td></td>
+                <td>Subtotal:</td>
+                <td></td>
+                <td></td>
+                <td style="border-top: 5px">$@Model.SubTotal.ToString("F")</td>
+            </tr>
+        </tbody>
+    </table>
+
+}
+
+<button onclick="window.location.href='/Cart/Checkout'">Check out</button>
+<a asp-controller="Shop" asp-action="Index">Keep shopping</a>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <label>@ViewBag.Notification</label>
+        <label>@ViewBag.Message</label>
+    </div>
+</div>

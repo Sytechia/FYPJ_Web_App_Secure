@@ -1,0 +1,53 @@
+﻿@using FYPJ_Web_App_Insecure.Models;
+@model IEnumerable<Customer>
+
+
+@{
+    ViewData["Title"] = "Admin";
+}
+@if (ViewBag.NotAllowed != null)
+{
+    <p>@ViewBag.NotAllowed</p>
+}
+else
+{
+
+    <h2>Hi Admin!</h2>
+    <p>Here are the registered users</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Uemail)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Postal_code)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+
+                @foreach (Customer customer in Model)
+                {
+                <tr>
+
+                    <td>@customer.Username</td>
+                    <td>@customer.Uemail</td>
+                    <td>@customer.Postal_code</td>
+                    <td>@customer.City</td>
+                    <td>@customer.Phone</td>
+                   
+                </tr>
+            }
+        </table>
+
+
+
+    }

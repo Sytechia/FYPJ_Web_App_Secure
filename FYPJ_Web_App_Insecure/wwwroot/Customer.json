@@ -1,0 +1,13 @@
+{
+  "id": 22,
+  "username": "Test",
+  "pwd": "test",
+  "confirmpwd": "test",
+  "uEmail": "test@test.com",
+  "postal_code": 121212,
+  "city": "test",
+  "phone": 89898989,
+  "active": 1,
+  "secret_ans": "Test",
+  "secret_qns": "Test?"
+}

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5b980ec-cbaf-467d-af46-74001f953e83" name="Default Changelist" comment="readme">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39c62699-2238-42eb-a507-95aa38e4c35a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/39c62699-2238-42eb-a507-95aa38e4c35a/storage_v2/_src_/schema/main.uQUzAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/833d9277-d280-43ef-a3e6-f66176128216.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Controllers/ShopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Controllers/ShopController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Views/Shop/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/Views/Shop/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/database.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/database.db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/database.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/FYPJ_Web_App_Insecure/database.db-wal" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1py4PRORqSmHNr1ehZYFMB8T0l0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite.xerial&#10;sqlite" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\prisc\source\repos\FYPJ_Web_App_Insecure" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="console_2.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/1c2c719c-2861-4ffc-82ef-bc14563aa2be/console_2.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.console_2.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5b980ec-cbaf-467d-af46-74001f953e83" name="Default Changelist" comment="" />
+      <created>1616141971930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616141971930</updated>
+      <workItem from="1616141974546" duration="961000" />
+      <workItem from="1616142958790" duration="755000" />
+      <workItem from="1616381658452" duration="6000" />
+      <workItem from="1616382090945" duration="4672000" />
+      <workItem from="1616466103018" duration="1784000" />
+      <workItem from="1616485277095" duration="6000" />
+      <workItem from="1616574503557" duration="730000" />
+      <workItem from="1617100272774" duration="949000" />
+      <workItem from="1617165529912" duration="5082000" />
+      <workItem from="1617247157861" duration="1443000" />
+      <workItem from="1617249864863" duration="614000" />
+      <workItem from="1617275397724" duration="600000" />
+      <workItem from="1617546832285" duration="79000" />
+      <workItem from="1617593294506" duration="3080000" />
+      <workItem from="1617603803549" duration="3783000" />
+      <workItem from="1617676227255" duration="2531000" />
+      <workItem from="1617768755359" duration="3660000" />
+      <workItem from="1617847179464" duration="1537000" />
+      <workItem from="1617852725346" duration="855000" />
+      <workItem from="1617865676031" duration="657000" />
+      <workItem from="1617868538840" duration="2000" />
+      <workItem from="1618300727988" duration="5608000" />
+      <workItem from="1618308548650" duration="85000" />
+      <workItem from="1618308643165" duration="597000" />
+      <workItem from="1618374687343" duration="2002000" />
+      <workItem from="1618471835860" duration="5000" />
+      <workItem from="1618500033281" duration="5000" />
+      <workItem from="1618535395256" duration="1972000" />
+      <workItem from="1618802297145" duration="942000" />
+      <workItem from="1618820900458" duration="249000" />
+      <workItem from="1618900545875" duration="3219000" />
+      <workItem from="1618908178059" duration="438000" />
+      <workItem from="1618972176938" duration="4363000" />
+      <workItem from="1619057895742" duration="667000" />
+      <workItem from="1619153508218" duration="1097000" />
+    </task>
+    <task id="LOCAL-00001" summary="readme">
+      <created>1618374781435</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618374781435</updated>
+    </task>
+    <task id="LOCAL-00002" summary="readme">
+      <created>1618374832660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618374832660</updated>
+    </task>
+    <task id="LOCAL-00003" summary="readme">
+      <created>1618374895530</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618374895530</updated>
+    </task>
+    <task id="LOCAL-00004" summary="readme">
+      <created>1618541699203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618541699204</updated>
+    </task>
+    <task id="LOCAL-00005" summary="readme">
+      <created>1618821052752</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618821052752</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+  </component>
+</project>

@@ -1,0 +1,21 @@
+﻿@using FYPJ_Web_App_Insecure.Models
+@model List<FileModel>
+<h1>Logs</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">File Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (FileModel file in Model)
+        {
+            <tr>
+                <td>@file.FileName</td>
+                <td>@Html.ActionLink("Download", "DownloadFile", new { fileName = file.FileName })</td>
+            </tr>
+        }
+    </tbody>
+</table>

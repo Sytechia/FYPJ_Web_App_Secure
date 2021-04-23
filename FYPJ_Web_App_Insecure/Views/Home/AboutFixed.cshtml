@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Welcome to ExploitMe!";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://stackpath.bootstrapcdn.com/twitter-bootstrap/2.1/css/bootstrap-combined.min.css"
+          rel="stylesheet"
+          integrity="sha384-G87n9a15LEsz+OvKCr10ldEbckfbCpr2gjYnZgCiKiwH0p/If1QkSURCTzubbt19"
+          crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/twitter-bootstrap/2.1/js/bootstrap.min.js"
+            integrity="sha384-2sVosMIQw67h8RBCTmE20BSl9j66nWwbH+2W/CKr8celILSNnEfJnJv2PKCdet3I"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>
+        About:
+    </h2>
+    <div>
+        This is an intentionally insecure bookstore created to cover the basics of the OWASP top 10 list created using ASP.NET Core.
+
+    </div>
+    <div class="container">
+
+        <a href="#"
+           data-toggle="popover"
+           title="<script>alert('XSS')</script>"
+           data-content="<script>alert('XSS')</script>">Toggle popover</a>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</body>
+</html>

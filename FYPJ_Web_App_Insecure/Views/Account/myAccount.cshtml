@@ -1,0 +1,254 @@
+﻿@model FYPJ_Web_App_Insecure.Models.CustomerTrans
+@inject IHttpContextAccessor HttpContextAccessor
+@using Microsoft.AspNetCore.Http
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    body {
+        background: -webkit-linear-gradient(left, #D0D0D0, #ffffff,);
+    }
+
+    .emp-profile {
+        padding: 3%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 0.5rem;
+        background: #fff;
+    }
+
+    .profile-img {
+        text-align: center;
+    }
+
+        .profile-img img {
+            width: 70%;
+            height: 100%;
+        }
+
+        .profile-img .file {
+            position: relative;
+            overflow: hidden;
+            margin-top: -20%;
+            width: 70%;
+            border: none;
+            border-radius: 0;
+            font-size: 15px;
+            background: #212529b8;
+        }
+
+            .profile-img .file input {
+                position: absolute;
+                opacity: 0;
+                right: 0;
+                top: 0;
+            }
+
+    .profile-head h5 {
+        color: #333;
+    }
+
+    .profile-head h6 {
+        color: #0062cc;
+    }
+
+    .profile-edit-btn {
+        border: none;
+        border-radius: 1.5rem;
+        width: 70%;
+        padding: 2%;
+        font-weight: 600;
+        color: #6c757d;
+        cursor: pointer;
+    }
+
+    .proile-rating {
+        font-size: 12px;
+        color: #818182;
+        margin-top: 5%;
+    }
+
+        .proile-rating span {
+            color: #495057;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+    .profile-head .nav-tabs {
+        margin-bottom: 5%;
+    }
+
+        .profile-head .nav-tabs .nav-link {
+            font-weight: 600;
+            border: none;
+        }
+
+            .profile-head .nav-tabs .nav-link.active {
+                border: none;
+                border-bottom: 2px solid #0062cc;
+            }
+
+    .profile-work {
+        padding: 14%;
+        margin-top: -15%;
+    }
+
+        .profile-work p {
+            font-size: 12px;
+            color: #818182;
+            font-weight: 600;
+            margin-top: 10%;
+        }
+
+        .profile-work a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .profile-work ul {
+            list-style: none;
+        }
+
+    .profile-tab label {
+        font-weight: 600;
+    }
+
+    .profile-tab p {
+        font-weight: 600;
+        color: #0062cc;
+    }
+</style>
+
+@{ ViewData["Title"] = "Profile"; }
+<div class="container">
+    <br />
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Edit Profile</a></li>
+        <li><a data-toggle="tab" href="#menu2">Transaction History</a></li>
+        <li><a data-toggle="tab" href="#menu3">My Cards</a></li>
+        <li><a data-toggle="tab" href="#menu4">Deactivate Account</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            @Html.Raw(Model.Username)
+                        </h5>
+                        <h6>
+                            User no. #@Model.UserId
+                        </h6>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>User Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Model.Uemail</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>User Postal Code</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Model.Postal_code</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>City</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Model.City</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>@Model.Phone</p>
+                            </div>
+                        </div>
+                        @if (ViewBag.isAdmin != null)
+                        {
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Secret</label>
+                </div>
+                <div class="col-md-6">
+                    <p>/routes</p>
+                </div>
+            </div>}
+
+
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <!--<input type="submit" class="profile-edit-btn" name="btnAddMore" value="Delete User" />-->
+                    <a class="nav-link text-dark profile-edit-btn" asp-area="" asp-controller="Account" asp-action="Deactivate" asp-route-id="@HttpContextAccessor.HttpContext.Session.GetString("UserId").ToString()">Deactivate User</a><br />
+                    <a class="nav-link text-dark profile-edit-btn" asp-area="" asp-controller="Account" asp-action="EditAccount" asp-route-id="@HttpContextAccessor.HttpContext.Session.GetString("UserId").ToString()">Edit Profile</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <table class="table table-hover table-bordered results">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th class="col-md-4 col-xs-4">Title</th>
+                        <th class="col-md-3 col-xs-3">Price</th>
+                        <th class="col-md-3 col-xs-3">Quantity</th>
+                        <th class="col-md-2 col-xs-2">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.orderHistory)
+                    {
+        <tr>
+            <th scope="row">@item.TransactionId</th>
+            <td>@Model.products.Where(x => x.ProductId.Equals(item.ProductId.ToString())).First().Title</td>
+            <td>$@item.UnitPrice</td>
+            <td>@item.Quantity</td>
+            <td>$@((item.UnitPrice * item.Quantity) - (decimal)item.Discount)</td>
+        </tr>}
+                </tbody>
+            </table>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3>Menu 3</h3>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        <div id="menu4" class="tab-pane fade">
+            <h3>Menu 4</h3>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+    </div>
+
+</div>
+

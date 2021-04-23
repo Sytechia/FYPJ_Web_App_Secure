@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS test</title>
+</head>
+<body>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Dummy Search</h2>
+            <form><input id="q" name="q" value="sample" /><button>test</button></form>
+
+        </div>
+    </div>
+
+    
+    <p id="result"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        const queries = {};
+        location.search.slice(1).split('&').forEach((s) => {
+            const keyvalue = s.split('=');
+            queries[keyvalue[0]] = decodeURIComponent(keyvalue[1].replace(/\+/g, ' '));
+        });
+        if (queries['q']) {
+            $('#q').val(queries['q']);
+            $('#result').html(queries['q'] + ' Search results');
+        }
+    </script>
+</body>
+</html>

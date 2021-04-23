@@ -1,0 +1,68 @@
+﻿@model IEnumerable<FYPJ_Web_App_Insecure.Models.Products>
+
+
+@{ ViewData["Title"] = "Index"; }
+
+
+<form>
+    <p>
+        Title: <input type="text" name="searchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+
+
+<table class="table">
+    <h2>@Html.Raw(Context.Request.Query["searchString"])</h2>
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                author
+            </th>
+            <th>
+                Genre
+            </th>
+            <th>
+                Price
+            </th>
+
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@item.image" style="height:100px;width:80px;">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+
+                <td>
+                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.ProductId">Add to Cart</a> |
+                    <a asp-action="Details" asp-controller="Shop" asp-route-id="@item.ProductId">Details</a>
+                    <p>@ViewBag.Message</p>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
