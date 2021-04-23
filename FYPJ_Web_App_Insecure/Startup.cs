@@ -71,6 +71,11 @@ namespace FYPJ_Web_App_Insecure
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCookiePolicy(
+            new CookiePolicyOptions
+            {
+                Secure = CookieSecurePolicy.Always
+            });
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseRouting();
